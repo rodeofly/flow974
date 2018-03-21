@@ -24,15 +24,7 @@ telegram = new Vue({
     messages: [
       {
         user: 0,
-        text: 'Hello, I\'m a bot in a Messenger. I can be programmed without writing any code. Just use the node editor on the left'
-      },
-      {
-        user: 0,
-        text: 'This example is a demonstration of [d3-node-editor](https://github.com/Ni55aN/d3-node-editor) library. Based on it you can make your powerful editor'
-      },
-      {
-        user: 0,
-        text: 'If you like the project, you can [support it](https://github.com/Ni55aN/d3-node-editor#donate)'
+        text: 'Salut, je suis un bot dans un Messenger. Je peux être programmé sans taper de ligne de code. Il suffit d\'utiliser l\'éditeur à gauche'
       }
     ]
   },

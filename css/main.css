@@ -75,7 +75,6 @@ body {
 
 .footer-container,
 .main aside {
-    display:none;
     border-top: 20px solid #e44d26;
 }
 
@@ -295,6 +294,8 @@ button.compile {
   height: 80px;
 }
 
+/* Footer*/
+.footer-container .wrapper h3 { text-align: right;}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -370,8 +371,9 @@ button.compile {
     }
 
     .main aside {
-        float: right;
-        width: 28%;
+        display:none;
+        /*float: right;
+        width: 28%;*/
     }
 }
 

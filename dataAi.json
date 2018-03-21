@@ -32,7 +32,7 @@
             44,
             138
          ],
-         "title":"Message event"
+         "title":"Évènement Message"
       },
       "2":{  
          "id":2,
@@ -65,7 +65,7 @@
             673.2072854903905,
             194.82554933538893
          ],
-         "title":"Message send"
+         "title":"Message envoyé"
       },
       "3":{  
          "id":3,
@@ -138,7 +138,7 @@
             333.40730287320383,
             22.1000138522662
          ],
-         "title":"Message match"
+         "title":"Message identique"
       },
       "5":{  
          "id":5,
@@ -171,7 +171,7 @@
             670.6284575254812,
             -103.66713461561366
          ],
-         "title":"Message send"
+         "title":"Message ENVOYÉ"
       },
       "6":{  
          "id":6,

@@ -19,9 +19,9 @@ eventHandlers = {
   }
 };
 
-keydownComp = new D3NE.Component('Keydown event', {
+keydownComp = new D3NE.Component('Touche enfoncée', {
   builder: function(node) {
-    return node.addOutput(new D3NE.Output('', actionSocket)).addOutput(new D3NE.Output('Key code', dataSocket));
+    return node.addOutput(new D3NE.Output('', actionSocket)).addOutput(new D3NE.Output('Code touche', dataSocket));
   },
   worker: function(node, inputs, outputs) {
     var task;
@@ -39,9 +39,9 @@ keydownComp = new D3NE.Component('Keydown event', {
   }
 });
 
-enterpressComp = new D3NE.Component('Enter pressed', {
+enterpressComp = new D3NE.Component('Entrée pressée', {
   builder: function(node) {
-    return node.addInput(new D3NE.Input('', actionSocket)).addInput(new D3NE.Input('Key code', dataSocket)).addOutput(new D3NE.Output('Then', actionSocket)).addOutput(new D3NE.Output('Else', actionSocket));
+    return node.addInput(new D3NE.Input('', actionSocket)).addInput(new D3NE.Input('Code touche', dataSocket)).addOutput(new D3NE.Output('A1ors', actionSocket)).addOutput(new D3NE.Output('Sinon', actionSocket));
   },
   worker: function(node, inputs, outputs) {
     var task;
@@ -58,7 +58,7 @@ enterpressComp = new D3NE.Component('Enter pressed', {
   }
 });
 
-alertComp = new D3NE.Component('Alert', {
+alertComp = new D3NE.Component('Alerte', {
   builder: function(node) {
     var ctrl;
     ctrl = new D3NE.Control('<input type="text" value="Message...">', (el, c) => {

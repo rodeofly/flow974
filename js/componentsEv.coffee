@@ -15,9 +15,9 @@ eventHandlers =
     @list.push h
     return
 
-keydownComp = new (D3NE.Component)('Keydown event',
+keydownComp = new (D3NE.Component)('Touche enfoncée',
   builder: (node) ->
-    node.addOutput(new (D3NE.Output)('', actionSocket)).addOutput new (D3NE.Output)('Key code', dataSocket)
+    node.addOutput(new (D3NE.Output)('', actionSocket)).addOutput new (D3NE.Output)('Code touche', dataSocket)
   worker: (node, inputs, outputs) ->
     task = new (D3NE.Task)(inputs, (inps, data) ->
       console.log 'Keydown event', node.id, data
@@ -34,9 +34,9 @@ keydownComp = new (D3NE.Component)('Keydown event',
 )
 
 
-enterpressComp = new (D3NE.Component)('Enter pressed',
+enterpressComp = new (D3NE.Component)('Entrée pressée',
   builder: (node) ->
-    node.addInput(new (D3NE.Input)('', actionSocket)).addInput(new (D3NE.Input)('Key code', dataSocket)).addOutput(new (D3NE.Output)('Then', actionSocket)).addOutput new (D3NE.Output)('Else', actionSocket)
+    node.addInput(new (D3NE.Input)('', actionSocket)).addInput(new (D3NE.Input)('Code touche', dataSocket)).addOutput(new (D3NE.Output)('A1ors', actionSocket)).addOutput new (D3NE.Output)('Sinon', actionSocket)
   worker: (node, inputs, outputs) ->
     task = new (D3NE.Task)(inputs, (inps) ->
       if inps[0][0] == 13
@@ -52,7 +52,7 @@ enterpressComp = new (D3NE.Component)('Enter pressed',
 )
 
 
-alertComp = new (D3NE.Component)('Alert',
+alertComp = new (D3NE.Component)('Alerte',
   builder: (node) ->
     ctrl = new (D3NE.Control)('<input type="text" value="Message...">', (el, c) =>
 

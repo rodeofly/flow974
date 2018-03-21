@@ -24,7 +24,11 @@ telegram = new Vue({
     messages: [
       {
         user: 0,
-        text: 'Salut, je suis un bot dans un Messenger. Je peux être programmé sans taper de ligne de code. Il suffit d\'utiliser l\'éditeur à gauche'
+        text: 'Salut, je suis un bot dans un Messenger. Je peux être programmé sans taper de ligne de code. Il suffit d\'utiliser l\'éditeur à gauche. Pour l\instant je ne comprend que -hello-, tout le reste me fait sourire !'
+      },
+      {
+        user: 0,
+        text: 'Alors parle moi, dis moi hello !'
       }
     ]
   },
@@ -73,7 +77,7 @@ actSocket = new D3NE.Socket('action', 'Action', 'hint');
 
 strSocket = new D3NE.Socket('string', 'String', 'hint');
 
-componentMessageEvent = new D3NE.Component('Message event', {
+componentMessageEvent = new D3NE.Component('Évènement Message', {
   builder: function(node) {
     var out1, out2;
     out1 = new D3NE.Output('Action', actSocket);
@@ -90,7 +94,7 @@ componentMessageEvent = new D3NE.Component('Message event', {
   }
 });
 
-componentMessageSend = new D3NE.Component('Message send', {
+componentMessageSend = new D3NE.Component('Message envoyé', {
   builder: function(node) {
     var inp1, inp2;
     inp1 = new D3NE.Input('Action', actSocket);
@@ -110,7 +114,7 @@ componentMessageSend = new D3NE.Component('Message send', {
   }
 });
 
-componentMessageMatch = new D3NE.Component('Message match', {
+componentMessageMatch = new D3NE.Component('Message identique', {
   builder: function(node) {
     var ctrl, inp1, inp2, out1, out2;
     inp1 = new D3NE.Input('Action', actSocket);

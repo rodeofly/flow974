@@ -32,7 +32,7 @@
             114,
             133
          ],
-         "title":"Keydown event"
+         "title":"Touche enfoncée"
       },
       "3":{  
          "id":3,
@@ -80,7 +80,7 @@
             443,
             112
          ],
-         "title":"Enter pressed"
+         "title":"Entrée pressée"
       },
       "10":{  
          "id":10,
@@ -105,7 +105,7 @@
             773,
             106
          ],
-         "title":"Alert"
+         "title":"Alerte"
       },
       "11":{  
          "id":11,
@@ -130,7 +130,7 @@
             766,
             292
          ],
-         "title":"Alert"
+         "title":"Alerte"
       }
    },
    "groups":{  

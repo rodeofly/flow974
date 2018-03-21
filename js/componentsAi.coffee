@@ -19,7 +19,11 @@ telegram = new Vue
     messages: [
       {
         user: 0
-        text: 'Salut, je suis un bot dans un Messenger. Je peux être programmé sans taper de ligne de code. Il suffit d\'utiliser l\'éditeur à gauche'
+        text: 'Salut, je suis un bot dans un Messenger. Je peux être programmé sans taper de ligne de code. Il suffit d\'utiliser l\'éditeur à gauche. Pour l\instant je ne comprend que -hello-, tout le reste me fait sourire !'
+      }
+      {
+        user: 0
+        text: 'Alors parle moi, dis moi hello !'
       }
     ]
   methods:
@@ -51,7 +55,7 @@ receiveUser = (msg) -> telegram.sendBot msg
 actSocket = new (D3NE.Socket)('action', 'Action', 'hint')
 strSocket = new (D3NE.Socket)('string', 'String', 'hint')
 
-componentMessageEvent = new (D3NE.Component)('Message event',
+componentMessageEvent = new (D3NE.Component)('Évènement Message',
   builder: (node) ->
     out1 = new (D3NE.Output)('Action', actSocket)
     out2 = new (D3NE.Output)('Text', strSocket)
@@ -63,7 +67,7 @@ componentMessageEvent = new (D3NE.Component)('Message event',
     outputs[1] = task.output(0)
 )
 
-componentMessageSend = new (D3NE.Component)('Message send',
+componentMessageSend = new (D3NE.Component)('Message envoyé',
   builder: (node) ->
     inp1 = new (D3NE.Input)('Action', actSocket)
     inp2 = new (D3NE.Input)('Text', strSocket)
@@ -79,7 +83,7 @@ componentMessageSend = new (D3NE.Component)('Message send',
     )
 )
 
-componentMessageMatch = new (D3NE.Component)('Message match',
+componentMessageMatch = new (D3NE.Component)('Message identique',
   builder: (node) ->
     inp1 = new (D3NE.Input)('Action', actSocket)
     inp2 = new (D3NE.Input)('Text', strSocket)

@@ -183,8 +183,8 @@ $ ->
         editor.view.resize()
         editor.eventListener.trigger 'change'
 
-  $( "#telegram" ).show()
-  load "dataAi.json"
+  $( "#telegram" ).hide()
+  load "dataOp.json"
   
   $( "#Op" ).on "click", -> 
     load "dataOp.json"

@@ -255,7 +255,7 @@ button.compile {
   background-size: cover;
 }
 .content #telegram .messages {
-  height: 400px; /*calc(100% - 80px);*/
+  height: calc(100% - 80px);
   max-height: calc(100% - 80px);
   overflow: auto;
 }

@@ -211,8 +211,8 @@ $(function() {
       })();
     });
   };
-  $("#telegram").show();
-  load("dataAi.json");
+  $("#telegram").hide();
+  load("dataOp.json");
   $("#Op").on("click", function() {
     load("dataOp.json");
     return $("#telegram").hide();

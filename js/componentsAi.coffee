@@ -19,7 +19,7 @@ telegram = new Vue
     messages: [
       {
         user: 0
-        text: 'Salut, je suis un bot dans un Messenger. Je peux être programmé sans taper de ligne de code. Il suffit d\'utiliser l\'éditeur à gauche. Pour l\instant je ne comprend que -hello-, tout le reste me fait sourire !'
+        text: 'Salut, je suis un bot dans un Messenger. Je peux être programmé sans taper de ligne de code. Il suffit d\'utiliser l\'éditeur à gauche. Pour l\'instant je ne comprends que -hello-, tout le reste me fait sourire !'
       }
       {
         user: 0

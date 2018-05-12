@@ -36,7 +36,12 @@ menu = new D3NE.ContextMenu({
   Fonctions: {
     Fonction: componentModule,
     Entrée: componentInput,
-    Sortie: componentOutput
+    Sortie: componentOutput,
+    Identité: componentId,
+    Carré: componentSquare,
+    Racine: componentRac,
+    Sinus: componentSin,
+    Cosinus: componentCos
   },
   Opération: {
     Addition: componentAdd,
@@ -62,7 +67,7 @@ menu = new D3NE.ContextMenu({
   }
 });
 
-components = [componentNum, componentAdd, componentSous, componentMult, componentDiv, componentPow, componentModule, componentInput, componentOutput, keydownComp, enterpressComp, alertComp, componentMessageEvent, componentMessageSend, componentMessageMatch, componentMessage];
+components = [componentNum, componentAdd, componentSous, componentMult, componentDiv, componentPow, componentSquare, componentSin, componentCos, componentRac, componentId, componentModule, componentInput, componentOutput, keydownComp, enterpressComp, alertComp, componentMessageEvent, componentMessageSend, componentMessageMatch, componentMessage];
 
 container = document.querySelector('#d3ne');
 

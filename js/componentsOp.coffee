@@ -13,7 +13,67 @@ componentNum = new (D3NE.Component)('Nombre',
     outputs[0] = node.data.num
 )
 
-# Fonction identique pour tout les opérateurs binaires
+
+# Fonction identique pour toutes les fonctions
+fn_builder = (node) ->
+  inp1 = new (D3NE.Input)('Nombre', numSocket)
+  out = new (D3NE.Output)('Nombre', numSocket)
+  numControl = new (D3NE.Control)('<input readonly type="number">', (el, control) =>
+    control.setValue = (val) => el.value = val
+  )
+  node.addInput(inp1).addControl(numControl).addOutput out
+# Fonction identique pour toutes les fonctions
+fn_worker = (val, node, inputs, outputs, module) ->
+  if (!module)
+    node_temp = getNode( node.id )
+    node_temp.controls[0].setValue(val)
+  outputs[0] = val
+  
+componentId = new (D3NE.Component)('Identité',
+  builder: (node) -> fn_builder(node)
+
+  worker: (node, inputs, outputs, module) ->
+    val = inputs[0][0];
+    fn_worker(val, node, inputs, outputs, module)
+)
+
+
+
+componentSquare = new (D3NE.Component)('Carré',
+  builder: (node) -> fn_builder(node)
+
+  worker: (node, inputs, outputs, module) ->
+    val = inputs[0][0] * inputs[0][0];
+    fn_worker(val, node, inputs, outputs, module)
+)
+
+componentSin = new (D3NE.Component)('Sinus',
+  builder: (node) -> fn_builder(node)
+
+  worker: (node, inputs, outputs, module) ->
+    val = Math.sin Math.PI/180*inputs[0][0];
+    fn_worker(val, node, inputs, outputs, module)
+)
+
+componentCos = new (D3NE.Component)('Cosinus',
+  builder: (node) -> fn_builder(node)
+
+  worker: (node, inputs, outputs, module) ->
+    val = Math.cos Math.PI/180*inputs[0][0];
+    fn_worker(val, node, inputs, outputs, module)
+)
+
+componentRac = new (D3NE.Component)('Racine',
+  builder: (node) -> fn_builder(node)
+
+  worker: (node, inputs, outputs, module) ->
+    val = Math.sqrt inputs[0][0];
+    fn_worker(val, node, inputs, outputs, module)
+)
+
+
+
+# Fonction identique pour tous les opérateurs binaires
 op_builder = (node) ->
   inp1 = new (D3NE.Input)('Nombre', numSocket)
   inp2 = new (D3NE.Input)('Nombre', numSocket)
@@ -29,7 +89,6 @@ op_worker = (val, node, inputs, outputs, module) ->
     node_temp.controls[0].setValue(val)
   outputs[0] = val
   
-
 componentAdd = new (D3NE.Component)('Ajouter',
   builder: (node) -> op_builder(node)
 

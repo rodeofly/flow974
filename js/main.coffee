@@ -28,6 +28,11 @@ menu = new (D3NE.ContextMenu)(
     Fonction: componentModule
     Entrée: componentInput
     Sortie: componentOutput
+    Identité: componentId
+    Carré: componentSquare
+    Racine: componentRac
+    Sinus: componentSin
+    Cosinus: componentCos
   Opération :
     Addition: componentAdd
     Soustration: componentSous
@@ -57,6 +62,11 @@ components = [
   componentMult
   componentDiv
   componentPow
+  componentSquare
+  componentSin
+  componentCos
+  componentRac
+  componentId
   componentModule
   componentInput
   componentOutput
